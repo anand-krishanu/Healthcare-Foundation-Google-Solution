@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-donate',
@@ -9,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class DonateComponent {
 
+  constructor ( private router: Router) {}
+  
+
+  OnPayment() {
+    this.router.navigate(['/nf4873iufbi3tt']);
+  }
 }

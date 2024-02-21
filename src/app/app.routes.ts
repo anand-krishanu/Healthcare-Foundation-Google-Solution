@@ -12,9 +12,9 @@ export const routes: Routes = [
     { path: '', component: HomePageComponent },
     { path: 'about', component: AboutPageComponent },
     { path: 'services', component: MedicalServicesComponent },
-    { path: 'donate', component: DonateComponent },
+    { path: 'nmfdi39984hfi', component: DonateComponent },
     { path: 'appointment', component: AppointmentComponent },
     { path: 'sign-in', component: SignInComponent },
-    { path: '**', component: ErrorComponent },
-    { path: 'hfb9u94ofn', component: ThankYouComponent }
+    {path: 'nf4873iufbi3tt', component: ThankYouComponent},
+    { path: '**', component: ErrorComponent }
 ];

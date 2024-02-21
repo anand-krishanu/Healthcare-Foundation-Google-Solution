@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 @Component({
@@ -32,7 +31,7 @@ export class SignInComponent {
     if (this.donationForm.valid) {
       const formData = this.donationForm.value;
       localStorage.setItem('formData', JSON.stringify(formData));
-      this.router.navigate(['/donate']);
+      this.router.navigate(['/nmfdi39984hfi']);
     }
   }
 }

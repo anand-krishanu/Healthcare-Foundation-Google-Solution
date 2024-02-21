@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppointmentComponent {
   addAppointment(event: Event) {
-    event.preventDefault(); // Prevent the default form submission behavior
-    console.log("Appointment added"); // Log a message to the console
+    event.preventDefault();
+    console.log("Appointment added");
   }
 }
