@@ -1,0 +1,11 @@
+.hero-header {
+    /* background-color: rgb(110, 199, 110) !important; */
+    background-image: url(C:/dev/Donation-Website/src/assets/Operationnn.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.welcome {
+    color: aliceblue;
+    font-size: 24px;
+}

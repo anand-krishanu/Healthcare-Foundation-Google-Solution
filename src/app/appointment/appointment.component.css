@@ -1,0 +1,15 @@
+.bg {
+    background-color: rgb(110, 199, 110);
+}
+
+.btn-bg {
+    background-color: rgb(110, 199, 110);
+}
+
+.form-container {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-bg :hover {
+    background-color: red;
+}

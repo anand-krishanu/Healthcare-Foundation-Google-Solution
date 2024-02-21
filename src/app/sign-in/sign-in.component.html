@@ -1,0 +1,37 @@
+<div class="bg">
+    <section class="leftSection">
+        <div>
+            <form class="form" [formGroup]="donationForm" (ngSubmit)="onSubmit()">
+                <p class="title">Donate Now </p>
+                <p class="message">Pls fill out the fields to continue to donate</p>
+                <div class="flex">
+                    <label>
+                        <input formControlName="firstname" required placeholder="" type="text" class="input">
+                        <span>Firstname</span>
+                    </label>
+
+                    <label>
+                        <input formControlName="lastname" required placeholder="" type="text" class="input">
+                        <span>Lastname</span>
+                    </label>
+                </div>
+
+                <label>
+                    <input formControlName="email" required placeholder="" type="text" class="input">
+                    <span>Email</span>
+                </label>
+
+                <label>
+                    <input formControlName="password" required placeholder="" type="text" class="input">
+                    <span>Password</span>
+                </label>
+                <label>
+                    <input formControlName="confirmPassword" required placeholder="" type="text" class="input">
+                    <span>Confirm password</span>
+                </label>
+                <button class="submit" (click)="onSubmit()">Submit</button>
+                <p class="signin"></p>
+            </form>
+        </div>
+    </section>
+</div>
