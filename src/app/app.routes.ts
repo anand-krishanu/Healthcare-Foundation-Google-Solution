@@ -10,7 +10,6 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
 
 export const routes: Routes = [
     { path: '', component: HomePageComponent },
-    { path: 'about', component: AboutPageComponent },
     { path: 'services', component: MedicalServicesComponent },
     { path: 'nmfdi39984hfi', component: DonateComponent },
     { path: 'appointment', component: AppointmentComponent },
