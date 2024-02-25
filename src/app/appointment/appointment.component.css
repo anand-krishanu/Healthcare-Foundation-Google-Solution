@@ -3,15 +3,12 @@
 }
 
 .btn-bg {
-    background-color: rgb(110, 199, 110);
+    background-color: rgb(10, 139, 10);
+    color: aliceblue;
 }
 
 .form-container {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.btn-bg :hover {
-    background-color: red;
 }
 
 .map {

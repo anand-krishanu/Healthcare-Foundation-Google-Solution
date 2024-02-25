@@ -14,9 +14,20 @@ export class AppointmentComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.initMap();
+    this.loadMapScript();
   }
 
+  loadMapScript() {
+    const apiKey = 'AIzaSyA1B2C3D4E5F6G7H8I9J0';
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+    script.defer = true;
+    script.async = true;
+    script.onload = () => {
+      this.initMap();
+    };
+    document.head.appendChild(script);
+  }
   initMap() {
     const map = new google.maps.Map(document.getElementById('map'), {
       center: { lat: 40.7128, lng: -74.0060 },
@@ -31,27 +42,27 @@ export class AppointmentComponent implements OnInit {
       type: ['hospital']
     };
 
-    service.nearbySearch(request, function (results: string | any[], status: any) {
+    service.nearbySearch(request, (results: any[], status: any) => {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
         for (let i = 0; i < results.length; i++) {
-          createMarker(results[i]);
+          this.createMarker(results[i], map);
         }
       }
     });
+  }
 
-    const createMarker = (place: { geometry: { location: any; }; name: string; vicinity: string; }) => {
-      const marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-      });
+  createMarker(place: any, map: any) {
+    const marker = new google.maps.Marker({
+      map: map,
+      position: place.geometry.location
+    });
 
-      const infowindow = new google.maps.InfoWindow();
+    const infowindow = new google.maps.InfoWindow();
 
-      google.maps.event.addListener(marker, 'click',  () => {
-        infowindow.setContent('<strong>' + place.name + '</strong><br>' + place.vicinity);
-        infowindow.open(map, this);
-      });
-    }
+    google.maps.event.addListener(marker, 'click', () => {
+      infowindow.setContent('<strong>' + place.name + '</strong><br>' + place.vicinity);
+      infowindow.open(map, marker);
+    });
   }
 
   addAppointment(event: Event) {
